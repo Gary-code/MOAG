@@ -358,11 +358,6 @@ class DecoderWithAttention(nn.Module):
             bias=False
         )
 
-        # with open('/home/xie/下载/VQG/data/word_embedding.pkl', "rb") as f:
-        #    embedding = pickle.load(f)
-        #    embedding = torch.Tensor(embedding).cuda()
-
-
         # self.encoder_cnn = EncoderCNN(features_dim)
         self.embedding_x = nn.Embedding(vocab_size, embed_dim)
         self.embedding = nn.Embedding(vocab_size, embed_dim)#.from_pretrained(embedding)  # embedding layer
